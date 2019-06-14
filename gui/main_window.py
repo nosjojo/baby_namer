@@ -42,6 +42,9 @@ class Ui_MainWindow(object):
         self.menuEdit = QtWidgets.QMenu(self.menuBar)
         self.menuEdit.setObjectName("menuEdit")
         MainWindow.setMenuBar(self.menuBar)
+        self.statusBar = QtWidgets.QStatusBar(MainWindow)
+        self.statusBar.setObjectName("statusBar")
+        MainWindow.setStatusBar(self.statusBar)
         self.actionLoad_Master_List = QtWidgets.QAction(MainWindow)
         self.actionLoad_Master_List.setObjectName("actionLoad_Master_List")
         self.actionView_Edit_Choices = QtWidgets.QAction(MainWindow)
@@ -56,7 +59,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Baby Names Helper"))
         self.yes_button.setText(_translate("MainWindow", "YES"))
         self.no_button.setText(_translate("MainWindow", "NO"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
