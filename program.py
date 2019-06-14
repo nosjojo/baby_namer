@@ -85,13 +85,11 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         name=self.baby_names_list_view.model().takeRow(self.baby_names_list_view.currentIndex().row())
         if name:
             self.accepted_list_model.appendRow(name)
-            print('ACCEPTED! - {}'.format(name[0].text()))
     
     def reject_name(self):
         name=self.baby_names_list_view.model().takeRow(self.baby_names_list_view.currentIndex().row())
         if name:
             self.rejected_list_model.appendRow(name)
-            print('REJECTED! - {}'.format(name[0].text()))
 
     def export_names_to_file(self, file, model):
         if file and model:
